@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  capacity: 1
+  features: MyString
+  price: 1
+  location: MyString
+  user: one
+  booking: one
+  vehicule_category: 
+
+two:
+  brand: MyString
+  capacity: 1
+  features: MyString
+  price: 1
+  location: MyString
+  user: two
+  booking: two
+  vehicule_category: 
