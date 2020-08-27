@@ -8,7 +8,7 @@ class CreateVehicules < ActiveRecord::Migration[6.0]
       t.string :location
       t.references :user, null: false, foreign_key: true
       t.references :booking, null: false, foreign_key: true
-      t.reference :vehicule_category
+      t.references :vehicule_category
 
       t.timestamps
     end
