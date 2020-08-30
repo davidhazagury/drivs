@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_30_062255) do
+ActiveRecord::Schema.define(version: 2020_08_30_062539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,17 +63,14 @@ ActiveRecord::Schema.define(version: 2020_08_30_062255) do
     t.integer "price"
     t.string "location"
     t.bigint "user_id", null: false
-    t.bigint "booking_id", null: false
     t.bigint "vehicule_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["booking_id"], name: "index_vehicules_on_booking_id"
     t.index ["user_id"], name: "index_vehicules_on_user_id"
     t.index ["vehicule_category_id"], name: "index_vehicules_on_vehicule_category_id"
   end
 
   add_foreign_key "bookings", "users"
   add_foreign_key "requested_bookings", "users"
-  add_foreign_key "vehicules", "bookings"
   add_foreign_key "vehicules", "users"
 end
