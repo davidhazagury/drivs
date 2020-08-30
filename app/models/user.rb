@@ -6,6 +6,7 @@ class User < ApplicationRecord
   # MODEL VALIDATIONS
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :email, uniqueness: true
   # DB REALTIONSHIPS
   has_many :vehicules, dependent: :destroy
   has_many :bookings, through: :requested_bookings
