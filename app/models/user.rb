@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # MODEL VALIDATIONS
   validates :first_name, presence: true
-  alidates :last_name, presence: true
+  validates :last_name, presence: true
   # DB REALTIONSHIPS
   has_many :vehicules
   has_many :bookings, through: :requested_bookings
