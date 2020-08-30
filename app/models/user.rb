@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   # DB REALTIONSHIPS
-  has_many :vehicules
+  has_many :vehicules, dependent: :destroy
   has_many :bookings, through: :requested_bookings
   has_many :requested_bookings
 end
