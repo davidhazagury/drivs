@@ -1,5 +1,6 @@
 class VehiculesController < ApplicationController
   def index
+    @vehicules = policy_scope(Vehicule).all
   end
 
   def show
