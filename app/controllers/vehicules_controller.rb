@@ -15,7 +15,7 @@ class VehiculesController < ApplicationController
     authorize @vehicule
     @vehicule.user_id = current_user.id
     if @vehicule.save!
-      redirect_to root
+      redirect_to root_path
     else
       render :new
     end
