@@ -1,1 +1,11 @@
 <h1> CREATE NEW VEHICULE </h1>
+<%= simple_form_for @vehicule do |f| %>
+  <%= f.input :brand, label: 'Add the brand of your vehicule', required: "true", error: 'Please specify one' %>
+  <%= f.input :features, label: 'Add your vehicule features (separated by ",")',required: "true", error: 'Please specify one' %>
+  <%= f.input :location, label:'Add the location of your vehicule', required: "true", error: 'Please specify one' %>
+  <%= f.input :capacity, label:'Add the capacity of your vehicule', required: "true", error: 'Please specify one'%>
+  <%= f.input :vehicule_category ,label:'Select your vehicule\'s category', :collection => %w[Car SUV Convertible 4X4 Motorbike Truck Van PickUp RV] %>
+  <%= f.input :price, label: 'Add the price of your vehicule', required: "true", error: 'Please specify one' %>
+  <%= f.input :photo, as: :file, label: 'Upload photos of your vehicule', required: "true", error: 'Please specify one'%>
+  <%= f.button :submit, "List your vehicule" %>
+<% end %>

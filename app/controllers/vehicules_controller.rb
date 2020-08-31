@@ -11,6 +11,7 @@ class VehiculesController < ApplicationController
   end
 
   def create
+    raise
   end
 
 end
