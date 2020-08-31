@@ -9,6 +9,8 @@ class Vehicule < ApplicationRecord
 
   # DB RELATIONSHIPS
   belongs_to :user
-  belongs_to :vehicule_category
   has_many :bookings
+
+  # CLOUDINARY PHOTOS OF THE VEHICULE
+  has_many_attached :photos
 end
