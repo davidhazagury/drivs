@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_164927) do
+ActiveRecord::Schema.define(version: 2020_08_31_170100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,12 +71,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_164927) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "vehicule_categories", force: :cascade do |t|
-    t.string "type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "vehicules", force: :cascade do |t|
     t.string "brand"
     t.integer "capacity"
@@ -84,11 +78,10 @@ ActiveRecord::Schema.define(version: 2020_08_31_164927) do
     t.integer "price"
     t.string "location"
     t.bigint "user_id", null: false
-    t.bigint "vehicule_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "vehicule_category"
     t.index ["user_id"], name: "index_vehicules_on_user_id"
-    t.index ["vehicule_category_id"], name: "index_vehicules_on_vehicule_category_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
