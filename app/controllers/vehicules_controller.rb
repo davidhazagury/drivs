@@ -1,4 +1,5 @@
 class VehiculesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
   def index
     @vehicules = policy_scope(Vehicule).all
   end
