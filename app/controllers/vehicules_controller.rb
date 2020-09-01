@@ -4,6 +4,11 @@ class VehiculesController < ApplicationController
   end
 
   def show
+    @vehicule = Vehicule.find(params[:id])
+    @features = @vehicule.features
+    @display_features = @features.split(", ")
+    authorize @vehicule
+
   end
 
   def new
