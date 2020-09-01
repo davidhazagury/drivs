@@ -30,5 +30,8 @@
   <li>
     Price: <%= vehicule.price %> $
   </li>
+  <li>
+    <%= link_to "Vehicule show", vehicule_path(vehicule.id)  %>
+  </li>
   <% end %>
 </ul>
