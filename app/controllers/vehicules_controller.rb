@@ -2,6 +2,14 @@ class VehiculesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
   def index
     @vehicules = policy_scope(Vehicule).all
+
+    # MAPBOX-GEOCODING
+    @markers = @vehicules.geocoded.map do |vehicule|
+      {
+        lat: vehicule.latitude,
+        lng: vehicule.longitude
+      }
+    end
   end
 
   def show
