@@ -1,0 +1,19 @@
+.filtering-options {
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+.cards-map-container {
+  display: flex;
+  height:100vh;
+  .cards-container {
+    background-color: yellow;
+    height: 100%;
+    width: 60%;
+  }
+  .map-container {
+    background: blue;
+    height: 100%;
+    width: 40%;}
+}
