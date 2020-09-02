@@ -1,7 +1,15 @@
+<div class="page-container">
+  <section class="filtering-options">
 
-<% @vehicules.each do |vehicule| %>
-  <%= vehicule.brand %>
-  <%= vehicule.capacity %>
-  <%= vehicule.features %>
-  <%= vehicule.price %>
-<% end %>
+  </section>
+  <section class="cards-map-container">
+    <div class="cards-container">
+      <% @vehicules.each do |vehicule| %>
+       <%= render 'shared/card', vehicule:vehicule %>
+      <% end %>
+    </div>
+    <div class="map-container">
+
+    </div>
+  </div>
+</section>

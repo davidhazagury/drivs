@@ -22,13 +22,17 @@ user4 = User.create!(email: 'user4@gmail.com', password: '123456789', first_name
 puts 'Creating vehicules ...'
 
 vehicule1_pic = URI.open('https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1367&q=80')
+vehicule1_pic2 = URI.open('https://images.unsplash.com/photo-1564834401194-3ab42d8aa25f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')
 vehicule1 = Vehicule.new(brand: 'BMW', capacity: 3, features: 'AC, radio, gps, leather', price: 20, location: 'Madrid', user_id: user1.id, vehicule_category: 'Car')
 vehicule1.photos.attach(io: vehicule1_pic, filename: 'bmw.png', content_type: 'image/png')
+vehicule1.photos.attach(io: vehicule1_pic2, filename: 'bmw2.png', content_type: 'image/png')
 vehicule1.save!
 
 vehicule2_pic = URI.open('https://images.unsplash.com/photo-1590590202163-32abd9ba85cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1369&q=80')
+vehicule2_pic2 = URI.open('https://images.unsplash.com/photo-1590590202162-9f5777220b45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 vehicule2 = Vehicule.new(brand: 'Opel', capacity: 5, features: 'AC, radio, gps, leather', price: 15, location: 'London', user_id: user2.id, vehicule_category: 'Car')
 vehicule2.photos.attach(io: vehicule2_pic, filename: 'opel.png', content_type: 'image/png')
+vehicule2.photos.attach(io: vehicule2_pic2, filename: 'opel2.png', content_type: 'image/png')
 vehicule2.save!
 
 vehicule3_pic = URI.open('https://images.unsplash.com/photo-1541969487406-1f1adf3884ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80')
