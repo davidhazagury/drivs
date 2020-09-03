@@ -1,7 +1,13 @@
 class VehiculesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
   def index
-    @vehicules = policy_scope(Vehicule).all
+
+    #Basic search
+    if params[:query].present?
+      @vehicules = policy_scope(Vehicule).search_by_brand_and_location(params[:query])
+    else
+      @vehicules = policy_scope(Vehicule).all
+    end
 
     # MAPBOX-GEOCODING
     @markers = @vehicules.geocoded.map do |vehicule|
