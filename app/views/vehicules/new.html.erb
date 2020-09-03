@@ -4,7 +4,7 @@
   <%= f.input :features, label: 'Add your vehicule features (separated by ",")',required: "true", error: 'Please specify one' %>
   <%= f.input :location, label:'Add the location of your vehicule', required: "true", error: 'Please specify one' %>
   <%= f.input :capacity, label:'Add the capacity of your vehicule', required: "true", error: 'Please specify one'%>
-  <%= f.input :vehicule_category ,label:'Select your vehicule\'s category', :collection => %w[Car SUV Convertible 4X4 Motorbike Truck Van PickUp RV] %>
+  <%= f.input :vehicule_category ,label:'Select your vehicule\'s category',  required: "true", :collection => %w[Car SUV Convertible 4X4 Motorbike Truck Van PickUp RV] %>
   <%= f.input :price, label: 'Add the price of your vehicule', required: "true", error: 'Please specify one' %>
  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.button :submit, "List your vehicule" %>

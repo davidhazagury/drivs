@@ -7,13 +7,6 @@
       %>
       <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
-    <%= form_tag vehicules_path, method: :get do %>
-      <%= check_box_tag :category_query,
-      params[:category_query],
-      %>
-      <%= label_tag :category_query,  %>
-    <% end %>
-
   </section>
   <section class="cards-map-container">
     <div class="cards-container">
