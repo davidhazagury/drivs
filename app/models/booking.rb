@@ -5,6 +5,6 @@ class Booking < ApplicationRecord
   validates :end_time, presence: true
 
   # DB RELATIONSHIPS
-  has_many :requested_bookings
+  belongs_to :user
   belongs_to :vehicule
 end
