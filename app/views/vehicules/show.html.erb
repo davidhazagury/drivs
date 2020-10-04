@@ -4,3 +4,4 @@
 <% end %>
 <%= @vehicule.brand %>
 <%= @vehicule.price %>
+<%= link_to "Book car", new_vehicule_request_booking_path(@vehicule.id)  %>
