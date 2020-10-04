@@ -11,7 +11,9 @@
   <section class="cards-map-container">
     <div class="cards-container">
       <% @vehicules.each do |vehicule| %>
-       <%= render 'shared/card', vehicule:vehicule %>
+        <%= link_to vehicule_path(vehicule.id) do  %>
+           <%= render 'shared/card', vehicule:vehicule %>
+        <% end %>
       <% end %>
     </div>
     <div class="map-container">
@@ -20,7 +22,6 @@
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
+</div>
