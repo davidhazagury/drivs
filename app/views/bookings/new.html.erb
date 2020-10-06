@@ -1,1 +1,15 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h1>NEW BOOKING!</h1>
+
+<%= simple_form_for [@vehicule, @booking] do |form|%>
+ <%= form.input :start_date, as: :date, label: 'Select starting date' %>
+ <%= form.input :end_time, as: :date, label: 'Select ending date' %>
+ <%= form.button :submit %>
+<% end %>
