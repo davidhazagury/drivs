@@ -1,8 +1,11 @@
 class BookingsController < ApplicationController
 
-def new
-  @vehicule = Vehicule.find(params[:vehicule_id])
-  authorize @booking
+  def new
+    @booking = Booking.new
+    authorize @booking
+  end
 
-end
+  def create
+
+  end
 end
