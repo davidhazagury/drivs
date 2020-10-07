@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :vehicules do
     resources :bookings, only: [:new, :create]
   end
+
+  resources :bookings, except: [:new, :create]
 end
