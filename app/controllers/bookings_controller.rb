@@ -8,17 +8,34 @@ class BookingsController < ApplicationController
   end
 
   def create
-
     @booking = Booking.new(strong_params)
     @vehicule = Vehicule.find(params[:vehicule_id])
     @booking.user_id = current_user.id
     @booking.vehicule_id = @vehicule.id
     authorize @booking
-    # IF END DATE BIGGER THAN START DATE => RAISE AN ERROR
-    # Need to transform string into date format
-    if @booking.start_date < @booking.end_time
-      redirect_to new_vehicule_booking_path(@vehicule), notice: 'Starting date can´t be bigger than ending date'
+
+   #CAN NOT ALLOW THE USER TO BOOK A CAR IF THE ENDING DATE IS BEFORE THE STARTING DATE
+
+    if @booking.end_time < @booking.start_date
+      redirect_to vehicule_path(@vehicule), notice: 'Sorry, starting date needs to
+                                                   be before the ending date'
+    else
+
+      if @booking.save
+        redirect_to booking_path(@booking), notice: "#{current_user.first_name},
+                                                    you have successfully booked
+                                                    #{@vehicule.brand}!"
+      else
+        flash[:alert] = @booking.errors.full_messages.first
+        redirect_to vehicule_path(@vehicule)
+      end
+
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   private
