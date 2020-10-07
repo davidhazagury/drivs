@@ -17,14 +17,14 @@ class BookingsController < ApplicationController
    #CAN NOT ALLOW THE USER TO BOOK A CAR IF THE ENDING DATE IS BEFORE THE STARTING DATE
 
     if @booking.end_time < @booking.start_date
-      redirect_to vehicule_path(@vehicule), notice: 'Sorry, starting date needs to
-                                                   be before the ending date'
+      redirect_to vehicule_path(@vehicule)
+      flash.now[:notice] = 'Sorry, starting date needs to be before the ending date'
+
     else
 
       if @booking.save
-        redirect_to booking_path(@booking), notice: "#{current_user.first_name},
-                                                    you have successfully booked
-                                                    #{@vehicule.brand}!"
+        redirect_to booking_path(@booking)
+        flash.now[:notice] = "#{current_user.first_name}, you have successfully booked #{@vehicule.brand}!"
       else
         flash[:alert] = @booking.errors.full_messages.first
         redirect_to vehicule_path(@vehicule)
