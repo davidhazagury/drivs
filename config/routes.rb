@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, except: [:new, :create]
+
+  scope :dashboard do
+    resources :bookings, only: [:index], as: 'dashboard'
+  end
 end

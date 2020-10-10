@@ -7,4 +7,5 @@ class Booking < ApplicationRecord
   # DB RELATIONSHIPS
   belongs_to :user
   belongs_to :vehicule
+
 end

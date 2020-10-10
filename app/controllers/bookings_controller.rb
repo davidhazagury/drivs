@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
     else
 
       if @booking.save
-        redirect_to booking_path(@booking)
+        redirect_to dashboard_index_path
         flash.now[:notice] = "#{current_user.first_name}, you have successfully booked #{@vehicule.brand}!"
       else
         flash[:alert] = @booking.errors.full_messages.first
@@ -34,9 +34,14 @@ class BookingsController < ApplicationController
   end
 
   def show
-    raise
     @booking = Booking.find(params[:id])
     authorize @booking
+  end
+
+  def index
+    @bookings = policy_scope(Booking).order(created_at: :desc)
+    raise
+
   end
 
   private
