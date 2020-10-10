@@ -1,0 +1,21 @@
+<h1><%= current_user.first_name %>DASHBOARD</h1>
+<h4>BOOKINGS AS A GUEST (user_id: <%= current_user.id %>)</h4>
+<ul>
+  <% count = 1 %>
+  <% @bookings.each do |booking| %>
+    <strong>Booking nº: <%= count %></strong>
+    <li>
+      Starting date: <%= booking.start_date %>
+    </li>
+    <li>
+      Ending date: <%= booking.end_time %>
+    </li>
+    <li>
+      Vehicule: <%= booking.vehicule.brand %>
+    </li>
+    <li>
+      Status: <%= booking.status %>
+    </li>
+    <% count += 1 %>
+  <% end %>
+</ul>
