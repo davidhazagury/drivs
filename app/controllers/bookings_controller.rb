@@ -40,8 +40,12 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = policy_scope(Booking).order(created_at: :desc)
+    @current_user_vehicules = current_user.vehicules
+    @received_bookings = []
+    @current_user_vehicules.each do |vehicule|
+      @received_bookings.push(vehicule.bookings)
+    end
     raise
-
   end
 
   private
