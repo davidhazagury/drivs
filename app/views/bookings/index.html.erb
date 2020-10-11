@@ -24,24 +24,22 @@
   <p>No bookings yet.</p>
 <% end %>
 
-<h1>Booking as a host</h1>
+<h4>BOOKINGS AS A HOST</h4>
   <ul>
-    <% count = 1 %>
-    <% @bookings.each do |booking| %>
-      <strong>Booking nº: <%= count %></strong>
-      <li>
-        Starting date: <%= booking.start_date %>
-      </li>
-      <li>
-        Ending date: <%= booking.end_time %>
-      </li>
-      <li>
-        Vehicule: <%= booking.vehicule.brand %>
-      </li>
-      <li>
-        Status: <%= booking.status %>
-      </li>
-      <% count += 1 %>
+    <% count_2 = 1 %>
+    <% @received_bookings.each do |booking_inst| %>
+        <% booking_inst.each do |booking| %>
+        <% if booking.present? %>
+          <strong>Booking nº: <%= count_2 %></strong>
+          <li>Starting date: <%= booking.start_date %></li>
+          <li>Ending date: <%= booking.end_time %></li>
+          <li>Vehicule: <%= booking.vehicule.brand %></li>
+          <li>Status: <%= booking.status %></li>
+          <li>Guest: <%= booking.user.first_name %> <%= booking.user.last_name %></li>
+          <% count_2 +=1  %>
+        <% else %>
+          <% next %>
+        <% end %>
+      <% end %>
     <% end %>
   </ul>
-<% end %>

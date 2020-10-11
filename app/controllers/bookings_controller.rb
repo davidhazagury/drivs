@@ -45,7 +45,6 @@ class BookingsController < ApplicationController
     @current_user_vehicules.each do |vehicule|
       @received_bookings.push(vehicule.bookings)
     end
-    raise
   end
 
   private
