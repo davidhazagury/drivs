@@ -1,0 +1,26 @@
+.landing-header {
+  width:100%;
+  background-color: #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  hr {
+    border: none;
+    height: 0.1px;
+    /* Set the hr color */
+    color: #6D326D; /* old IE */
+    background-color: #6D326D; /* Modern Browsers */
+    width: 34%;
+  }
+
+}
+
+
+
+
+
+.logo {
+  font-family: 'Sacramento', cursive;
+  font-size: 50px;
+  color: #6D326D;
+}
