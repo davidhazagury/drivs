@@ -1,0 +1,14 @@
+.btn-prim {
+  border: 2px solid #dbd8dc;
+  box-shadow:0 2px 8px 0 rgba(0,0,0,.08);
+  background-color: #fff;
+  border-radius: .375rem;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+  &:hover {
+    border-color: #6D326D;
+    transform: translate3d(0px, -1px, 0px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.15);
+  }
+
+}
