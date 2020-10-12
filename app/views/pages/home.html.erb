@@ -15,8 +15,12 @@
     </div>
   </section>
   <div class="btns-container">
-    <div class="log-in-btn btn-prim"></div>
-    <div class="sign-up-btn btn-second"></div>
+    <div class="log-in-btn btn-prim">
+      <%= link_to "Log in", new_user_session_path %>
+    </div>
+    <div class="sign-up-btn btn-second">
+      <%= link_to "Sign up", new_user_registration_path %>
+    </div>
   </div>
 </div>
 

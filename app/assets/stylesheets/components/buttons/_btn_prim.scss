@@ -1,14 +1,43 @@
 .btn-prim {
   border: 2px solid #dbd8dc;
   box-shadow:0 2px 8px 0 rgba(0,0,0,.08);
-  background-color: #fff;
+  background-color: #6D326D;
   border-radius: .375rem;
   transition-duration: .15s;
   transition-timing-function: ease-out;
+  text-decoration: none;
+  height:45px;
+  width: 130px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+  &:link {
+    a{
+    text-decoration: none;
+    color: #6D326D;
+    }
+  }
+  &:visited {
+    a {
+    text-decoration: none;
+    color: #6D326D;
+  }
+  }
   &:hover {
-    border-color: #6D326D;
+    a {
+    text-decoration: none;
+    color: white;
+  }
+    border-color: white;
     transform: translate3d(0px, -1px, 0px);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.15);
   }
 
 }
+
