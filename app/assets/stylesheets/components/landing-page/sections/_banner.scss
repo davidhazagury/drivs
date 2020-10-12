@@ -1,20 +1,26 @@
 .banner {
-  height: auto;
   width:100%;
-  background-color: #F1F1F1;
+  background-color: transparent;
   text-align: center;
-  height: auto;
   .banner-text {
-    width: 100%;
+    width: 70%;
+    background-color: white;
+    margin: 0 auto;
+    mix-blend-mode: screen;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
     .punchline {
       font-family: 'Roboto', sans-serif;
       font-size: 150px;
       font-weight: 900;
+      text-shadow: 0 2px 6px #070302;
+      margin: 0;
     }
     .secondary-punchline {
       font-family: 'Roboto', sans-serif;
       font-size: 45px;
       font-weight:300;
+
+      margin: 0;
     }
   }
 }
