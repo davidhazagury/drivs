@@ -3,3 +3,26 @@
     <p class="logo" id="logo">drivss</p>
     <hr class="right-line"></hr>
   </section>
+<script>
+  const landingHeaderAnimation2 = () => {
+  const logoHeader = document.querySelector(".landing-header");
+  const logo = document.querySelector('.logo');
+  const hrLeft = document.querySelector('.left-line');
+  const hrRight = document.querySelector('.right-line');
+    window.addEventListener("scroll",(e)=> {
+      if (window.pageYOffset >= 25) {
+        logoHeader.style.backgroundColor = "#F1F1F1";
+        logo.style.color = "#6D326D";
+        hrLeft.style.backgroundColor ="#6D326D";
+        hrRight.style.backgroundColor ="#6D326D";
+      } else if (window.pageYOffset < 25) {
+        logoHeader.style.backgroundColor = "transparent";
+        logo.style.color="white";
+        hrLeft.style.backgroundColor ="white";
+        hrRight.style.backgroundColor ="white";
+      }
+    });
+};
+landingHeaderAnimation2();
+</script>
+
