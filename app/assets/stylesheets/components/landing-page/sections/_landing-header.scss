@@ -1,4 +1,6 @@
 .landing-header {
+  transition:1s;
+  z-index: 20;
   width:100%;
   background-color: transparent;
   overflow: hidden;
@@ -15,9 +17,7 @@
     background-color: white; /* Modern Browsers */
     width: 34%;
   }
-
 }
-
 .logo {
   font-family: 'Sacramento', cursive;
   font-size: 50px;

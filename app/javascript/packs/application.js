@@ -23,3 +23,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
 
+// Landing logo header animation change color
+
+import { landingHeaderAnimation} from '../plugins/landing_header_animation';
+landingHeaderAnimation();
