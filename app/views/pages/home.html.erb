@@ -10,13 +10,7 @@
     </div>
   </div>
 </div>
-<section class="sec-one">
-  <p class="headers sec-one-header">Your new way to rent a car</p>
-  <div class="sec-one-content">
-    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_FizrwJ.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-  </div>
-</section>
-
+<%= render 'landing_page/sections/sec-one' %>
 <h1>Latest posts:</h1>
 <ul>
   <% @latest_vehicules.each do |vehicule| %>
