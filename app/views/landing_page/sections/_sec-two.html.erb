@@ -1,0 +1,12 @@
+<section class="sec-two">
+  <h1 sec-two-title>Latest posts:</h1>
+  <div class="landing-cards-wrapper">
+    <% @latest_vehicules.each do |vehicule| %>
+      <%= link_to vehicule_path(vehicule.id) do  %>
+        <div class="landing-card" style="background-image:url(<%= cl_image_path vehicule.photos.first.key %>)">
+
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>

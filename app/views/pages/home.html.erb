@@ -11,23 +11,5 @@
   </div>
 </div>
 <%= render 'landing_page/sections/sec-one' %>
-<h1>Latest posts:</h1>
-<ul>
-  <% @latest_vehicules.each do |vehicule| %>
-  <li>
-    Brand: <%= vehicule.brand %>
-  </li>
-  <li>
-    capacity: <%= vehicule.capacity %>
-  </li>
-  <li>
-    Features: <%= vehicule.features %>
-  </li>
-  <li>
-    Price: <%= vehicule.price %> $
-  </li>
-  <li>
-    <%= link_to "Vehicule show", vehicule_path(vehicule.id)  %>
-  </li>
-  <% end %>
-</ul>
+<%= render 'landing_page/sections/sec-two' %>
+
