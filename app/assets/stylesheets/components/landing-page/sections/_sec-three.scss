@@ -1,0 +1,45 @@
+.sec-three {
+  width:100%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding: 4.5% 0 4.5% 0;
+  .sec-three-text {
+    width: 40%;
+    .sec-three-title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color:#6D326D;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-bottom: 10%;
+    }
+    .sec-three-description {
+      width: 70%;
+      font-size: 18px;
+      color:black;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      line-height: 150%;
+    }
+    .list-car-btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+.landing-page-footer {
+  background-color: #f8f7f8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  p {
+    color:black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top:1%;
+    margin-bottom: 1%;
+  }
+}
