@@ -13,12 +13,13 @@
       if (window.pageYOffset >= 25) {
         logoHeader.style.backgroundColor = "#f8f7f8";
         logo.style.color = "#6D326D";
+        logoHeader.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)";
         hrLeft.style.backgroundColor ="#6D326D";
         hrRight.style.backgroundColor ="#6D326D";
       } else if (window.pageYOffset < 25) {
         logoHeader.style.backgroundColor = "transparent";
         logo.style.color="white";
-        logoHeader.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)"
+        logoHeader.style.boxShadow = "0 0 0 rgba(0,0,0,0)";
         hrLeft.style.backgroundColor ="white";
         hrRight.style.backgroundColor ="white";
       }
