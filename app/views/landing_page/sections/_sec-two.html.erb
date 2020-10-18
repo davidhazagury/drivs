@@ -1,0 +1,15 @@
+<section class="sec-two">
+  <h1 sec-two-title>Driveerss latest posts:</h1>
+  <div class="landing-cards-wrapper">
+    <% @latest_vehicules.each do |vehicule| %>
+      <%= link_to vehicule_path(vehicule.id) do  %>
+        <div class="landing-card" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(<%= cl_image_path vehicule.photos.first.key %>)">
+          <div class="landind-card-vehicule-details">
+            <p class="landing-card-text"><%= vehicule.brand %></p>
+            <p class="landing-card-text"><%= vehicule.price %> $/day</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>

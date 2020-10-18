@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @latest_vehicules = Vehicule.order(created_at: :desc).limit(4)
+    @latest_vehicules = Vehicule.order(created_at: :desc).limit(3)
     if current_user
       redirect_to vehicules_path
     end
